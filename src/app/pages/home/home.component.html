@@ -1,0 +1,95 @@
+<weather-header></weather-header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center text-white text-center py-32"
+        style="background-image: url('hero_image.jpg');">
+        <div class="max-w-screen-lg mx-auto px-6 bg-black bg-opacity-50 rounded-lg py-12">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Previsão do Tempo em Tempo Real
+            </h1>
+            <p class="text-lg md:text-xl mb-8">
+                Obtenha informações precisas e atualizadas sobre o clima na sua cidade ou em qualquer lugar do mundo.
+            </p>
+            <a href="/forecast" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-md 
+          hover:bg-blue-200 hover:shadow-lg transform hover:-translate-y-1 
+          transition duration-300 ease-in-out">
+                Ver Previsão
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section id="features" class="features py-20 bg-gray-100">
+        <div class="max-w-screen-lg mx-auto px-6">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-12">
+                Principais Funcionalidades
+            </h2>
+
+            <!-- Grid de Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <mat-icon class="text-blue-600 text-xl font-bold mb-6">location_on</mat-icon>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Localização Precisa</h3>
+                    <p class="text-gray-600">
+                        Consulte o clima atual com base na sua localização em tempo real.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <mat-icon class="text-blue-600 text-xl font-bold mb-6">cloud</mat-icon>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Clima Atualizado</h3>
+                    <p class="text-gray-600">
+                        Dados precisos e atualizados para você nunca ser pego de surpresa.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <mat-icon class="text-blue-600 text-xl font-bold mb-6">schedule</mat-icon>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Previsão por Hora</h3>
+                    <p class="text-gray-600">
+                        Veja as previsões do tempo detalhadas hora a hora para planejar o seu dia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about py-16 bg-white">
+        <div class="max-w-screen-lg mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="photo_home.jpg" alt="Sobre WeatherNow" class="rounded-lg shadow-lg" />
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <h2 class="text-3xl font-bold mb-4 text-blue-700">
+                    Sobre o WeatherNow
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    O WeatherNow é um aplicativo projetado para fornecer previsões meteorológicas rápidas, precisas e de
+                    fácil acesso.
+                    Quer você esteja planejando uma viagem ou apenas verificando o clima para o seu dia, nós temos as
+                    informações que você precisa.
+                </p>
+                <a href="https://openweathermap.org" target="_blank"
+                    class="text-blue-800 font-semibold hover:underline">
+                    Saiba mais sobre a API OpenWeatherMap
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<weather-footer></weather-footer>
