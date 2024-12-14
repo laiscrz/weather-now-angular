@@ -1,0 +1,92 @@
+<weather-header></weather-header>
+
+<main class="flex flex-col min-h-96">
+    <h1 class="text-center text-4xl font-semibold mt-12 mb-6 text-blue-700">
+        Consulte a Previsão do Tempo para Sua Cidade e Planeje o Seu Dia!
+    </h1>
+
+    <section class="bg-cover bg-center p-12 relative flex flex-col items-center gap-4"
+        style="background-image: url('fundo.jpg');">
+        <form-search (weatherData)="handleWeatherData($event)" (alertMessage)="handleAlertMessage($event)">
+        </form-search>
+
+        <div *ngIf="alertMessage" class="alert text-white text-lg text-center">
+            {{ alertMessage }}
+        </div>
+    </section>
+
+    <section class="p-10 flex justify-center items-center bg-gray-200">
+        <div *ngIf="!weatherData"
+            class="w-full min-h-[300px] flex items-center justify-center bg-white text-center text-xl font-semibold text-gray-500 shadow-xl p-8 rounded-xl">
+            Cidade não pesquisada
+        </div>
+
+
+        <div *ngIf="weatherData" id="container" class="w-full max-w-lg bg-white rounded-3xl shadow-xl p-8">
+            <h2 id="title" class="text-3xl font-semibold text-center text-gray-800 mb-4 uppercase">
+                {{ weatherData.name }} , {{weatherData.sys.country}}
+            </h2>
+            <div id="temp"
+                class="flex items-center justify-around bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl p-6">
+                <img id="temp_img"
+                    [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+                    alt="Weather Icon" />
+                <div>
+                    <p id="temp_value" class="text-6xl font-bold">{{ weatherData.main.temp }}°C</p>
+                    <p id="temp_description" class="capitalize text-xl font-medium">{{
+                        weatherData.weather[0].description }}</p>
+                </div>
+            </div>
+
+            <div id="other_infos" class="mt-8 grid grid-cols-2 gap-6">
+                <div class="info flex items-center bg-white shadow-md rounded-lg p-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z" />
+                    </svg>
+                    <div class="ml-3">
+                        <h2 class="text-sm font-semibold">Temp. Máx</h2>
+                        <p class="text-lg">{{ weatherData.main.temp_max }}°C</p>
+                    </div>
+                </div>
+
+                <div class="info flex items-center bg-white shadow-md rounded-lg p-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path d="M480-240 240-480l56-56 144 144v-368h80v368l144-144 56 56-240 240Z" />
+                    </svg>
+                    <div class="ml-3">
+                        <h2 class="text-sm font-semibold">Temp. Mín</h2>
+                        <p class="text-lg">{{ weatherData.main.temp_min }}°C</p>
+                    </div>
+                </div>
+
+                <div class="info flex items-center bg-white shadow-md rounded-lg p-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#000000">
+                        <path
+                            d="M483-205.33q14.67-.34 23.17-6.84 8.5-6.5 8.5-17.83 0-12-8.67-18.83-8.67-6.84-24.67-6.5-41.66 1-86-25.17Q351-306.67 339-373.67q-2-9.66-9.5-15.66t-16.5-6q-12 0-19 9.16-7 9.17-4.67 19.84Q305-280 363.33-242q58.34 38 119.67 36.67ZM480-80q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-66.67q109.33 0 181.33-74.5 72-74.5 72-186.83 0-77-64.5-174.67-64.5-97.66-188.83-208.66-124.33 111-188.83 208.66Q226.67-485 226.67-408q0 112.33 72 186.83 72 74.5 181.33 74.5ZM480-480Z" />
+                    </svg>
+                    <div class="ml-3">
+                        <h2 class="text-sm font-semibold">Umidade</h2>
+                        <p class="text-lg">{{ weatherData.main.humidity }}%</p>
+                    </div>
+                </div>
+
+                <div class="info flex items-center bg-white shadow-md rounded-lg p-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z" />
+                    </svg>
+                    <div class="ml-3">
+                        <h2 class="text-sm font-semibold">Vento</h2>
+                        <p class="text-lg">{{ weatherData.wind.speed }} km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<weather-footer></weather-footer>
