@@ -1,0 +1,5 @@
+@WebApi_HostAddress = https://api.openweathermap.org/data/2.5/weather?q=São%20Paulo&appid=e9da4d38051b2c21be1b8edcbf7c9656&units=metric&lang=pt_br
+
+
+GET {{WebApi_HostAddress}}
+Accept: application/json
