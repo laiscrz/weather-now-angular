@@ -17,7 +17,6 @@ export class ForecastComponent {
   alertMessage: string | null = null;
 
   handleWeatherData(data: WeatherResponse): void {
-    alert('Dados recebidos do Weather API:' + data);
     
     this.weatherData = data;
     this.alertMessage = null; 

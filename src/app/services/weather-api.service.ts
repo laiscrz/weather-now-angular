@@ -6,7 +6,7 @@ import { WeatherResponse } from '../interfaces/weather.interface';
 @Injectable({
   providedIn: 'root',
 })
-export class ForecastService {
+export class WeatherApiService {
   private apiKey = 'e9da4d38051b2c21be1b8edcbf7c9656';
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
