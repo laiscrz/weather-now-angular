@@ -10,6 +10,7 @@
 - **TypeScript** 🔧
 - **RxJS** 📡
 - **OpenWeather API** 🌍
+- **Tailwind CSS** 🎨
 
 ---
 
@@ -20,6 +21,23 @@
 - 💨 Exibe a velocidade do vento.
 - 🌦️ Descrição do clima (ex: céu limpo, chuvas, etc).
 - 📍 Suporte para várias cidades do mundo.
+
+---
+
+## 📸 **Fotos da Aplicação**
+
+### 🏠 **Página Inicial**
+
+![Página Inicial](https://github.com/user-attachments/assets/dce6ce2a-21b6-4b6b-bf0e-ee141093bbcb)
+
+A página inicial fornece detalhes sobre a API utilizada, a **OpenWeather API** 🌍. Aqui, o usuário pode aprender mais sobre como a aplicação busca informações climáticas em tempo real, oferecendo uma visão geral do funcionamento por trás do sistema 🌤️.
+
+### 🌦️ **Previsão do Tempo**
+
+![Previsão do Tempo](https://github.com/user-attachments/assets/dcefa85f-95da-4d39-bf2d-c5855f64a5d0)
+
+Na página de previsão, o usuário encontra a **barra de pesquisa** para digitar o nome da cidade 🔍. Após a pesquisa, são exibidas informações detalhadas sobre o clima, como temperatura atual, mínima e máxima 🌡️, descrição do clima (céu limpo, chuvas, etc.) 🌧️, velocidade do vento 💨 e muito mais!
+
 
 ---
 
