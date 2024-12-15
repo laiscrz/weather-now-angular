@@ -97,15 +97,21 @@ A API consumida no projeto é a **OpenWeather API**. A documentação completa d
 
 ---
 
-## ⚠️ **Nota sobre a API Key**
+### **Nota Importante sobre a API Key** ⚠️
 
-Antes de rodar a aplicação, você precisará substituir a chave da API na classe `WeatherApiService` para sua própria chave da OpenWeather API.
+A **API Key** presente no projeto foi **desativada** e não está mais em funcionamento. Para utilizar a aplicação corretamente, é necessário que cada usuário obtenha sua **própria chave de API** no [site da OpenWeather](https://openweathermap.org/).
+
+Substitua a chave no serviço `WeatherApiService`:
 
 ```typescript
 private apiKey = 'SUA_API_KEY_AQUI';
 ```
 
-Você pode obter uma chave de API gratuita no [site da OpenWeather](https://openweathermap.org/).
+**Passo a Passo para Obter a API Key:**
+1. Acesse o [OpenWeather](https://openweathermap.org/) e crie uma conta.
+2. Gere uma chave de API gratuita no painel do usuário.
+3. Substitua a chave antiga pela nova no código acima.
+
 
 ---
 
