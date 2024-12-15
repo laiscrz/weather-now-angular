@@ -34,7 +34,7 @@ A página inicial fornece detalhes sobre a API utilizada, a **OpenWeather API** 
 
 ### 🌦️ **Previsão do Tempo**
 
-![Previsão do Tempo](https://github.com/user-attachments/assets/dcefa85f-95da-4d39-bf2d-c5855f64a5d0)
+![Previsão do Tempo](https://github.com/user-attachments/assets/bfb20915-dfa5-4911-917f-fececdc870d4)
 
 Na página de previsão, o usuário encontra a **barra de pesquisa** para digitar o nome da cidade 🔍. Após a pesquisa, são exibidas informações detalhadas sobre o clima, como temperatura atual, mínima e máxima 🌡️, descrição do clima (céu limpo, chuvas, etc.) 🌧️, velocidade do vento 💨 e muito mais!
 
