@@ -38,7 +38,6 @@ A página inicial fornece detalhes sobre a API utilizada, a **OpenWeather API** 
 
 Na página de previsão, o usuário encontra a **barra de pesquisa** para digitar o nome da cidade 🔍. Após a pesquisa, são exibidas informações detalhadas sobre o clima, como temperatura atual, mínima e máxima 🌡️, descrição do clima (céu limpo, chuvas, etc.) 🌧️, velocidade do vento 💨 e muito mais!
 
-
 ---
 
 ## ⚙️ **Instalação**
@@ -90,6 +89,27 @@ ng test --include "src/app/services/weather-api.service.spec.ts"
 
 ---
 
+## 🌍 **Documentação da API**
+
+A API consumida no projeto é a **OpenWeather API**. A documentação completa da API pode ser encontrada no seguinte link:
+
+[Documentação da OpenWeather API](https://openweathermap.org/current) 🌐
+
+---
+
+## ⚠️ **Nota sobre a API Key**
+
+Antes de rodar a aplicação, você precisará substituir a chave da API na classe `WeatherApiService` para sua própria chave da OpenWeather API.
+
+```typescript
+private apiKey = 'SUA_API_KEY_AQUI';
+```
+
+Você pode obter uma chave de API gratuita no [site da OpenWeather](https://openweathermap.org/).
+
+---
+
 ## 📄 **Licença**
 
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
