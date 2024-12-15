@@ -1,59 +1,77 @@
-# WeatherNowAngular
+# 🌤️ **WeatherNow** - Aplicação de Previsão do Tempo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+**WeatherNow** é um aplicativo simples e rápido para verificar a previsão do tempo para qualquer cidade ao redor do mundo. Ele utiliza a API do OpenWeather para fornecer informações precisas e atualizadas sobre o clima.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🧑‍💻 **Tecnologias Utilizadas**
 
-```bash
-ng serve
-```
+- **Angular** 🚀
+- **TypeScript** 🔧
+- **RxJS** 📡
+- **OpenWeather API** 🌍
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📝 **Funcionalidades**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 🌇 Visualização da previsão do tempo para uma cidade específica.
+- 🌡️ Mostra a temperatura atual, mínima e máxima.
+- 💨 Exibe a velocidade do vento.
+- 🌦️ Descrição do clima (ex: céu limpo, chuvas, etc).
+- 📍 Suporte para várias cidades do mundo.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ⚙️ **Instalação**
 
-```bash
-ng generate --help
-```
+1. **Clone o repositório:**
 
-## Building
+   ```bash
+   git clone https://github.com/laiscrz/weather-now-angular.git
+   ```
 
-To build the project run:
+2. **Instale as dependências:**
 
-```bash
-ng build
-```
+   ```bash
+   cd WeatherNow
+   npm install
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. **Execute o aplicativo:**
 
-## Running unit tests
+   ```bash
+   ng serve
+   ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+   Acesse a aplicação em: `http://localhost:4200/`
+
+---
+
+## 🌍 **Como Usar**
+
+1. Abra o aplicativo.
+2. Digite o nome de uma cidade na barra de pesquisa.
+3. Veja as informações sobre o clima na tela!
+
+---
+
+## 🧪 **Testes**
+
+Os testes foram implementados no serviço de consulta à API. Eles são executados com o Karma e Jasmine. Para rodá-los:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Para rodar os testes específicos do serviço `weather-api.service`:
 
 ```bash
-ng e2e
+ng test --include "src/app/services/weather-api.service.spec.ts"
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📄 **Licença**
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
