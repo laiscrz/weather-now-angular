@@ -76,6 +76,6 @@ describe('WeatherApiService', () => {
 
     requisicao.flush(mensagemErro, { status: 404, statusText: 'Not Found' });
 
-    tick(); // Avança o tempo para garantir que todas as requisições sejam resolvidas
+    tick();
   }));
 });
