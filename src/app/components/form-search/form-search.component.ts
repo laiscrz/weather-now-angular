@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-import { ForecastService } from '../../services/weather-api.service';
+import { WeatherApiService } from '../../services/weather-api.service';
 
 @Component({
   selector: 'form-search',
@@ -18,7 +18,7 @@ export class FormSearchComponent {
   @Output() weatherData = new EventEmitter<any>();
   @Output() alertMessage = new EventEmitter<string>();
 
-  constructor(private forecastService: ForecastService) {
+  constructor(private weatherApiService: WeatherApiService) {
     this.searchForm = new FormGroup({
       cityName: new FormControl('', [Validators.required, Validators.minLength(2)]),
     });
@@ -32,7 +32,7 @@ export class FormSearchComponent {
   
     const cityName = this.searchForm.value.cityName.trim();
     if (cityName) {
-      this.forecastService.getWeather(cityName).subscribe({
+      this.weatherApiService.getWeather(cityName).subscribe({
         next: (data) => {
           console.log('Dados recebidos da API:', data); 
           this.weatherData.emit(data);
